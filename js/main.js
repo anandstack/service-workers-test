@@ -16,7 +16,7 @@ if (navigator.serviceWorker) {
           registration.unregister();
         }
       })
-      .then(() => {
+      /*.then(() => {
         navigator.serviceWorker
             .register(serviceWorkerLocation)
           .then((reg) => {
@@ -27,7 +27,7 @@ if (navigator.serviceWorker) {
             console.log("Error while registering new Service Worker");
             console.log(err);
           });
-      })
+      })*/
       .catch(function (err) {
         console.log("Service Worker unregistration failed: ", err);
       });
