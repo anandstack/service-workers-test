@@ -6,6 +6,7 @@ const jinka_assets = [
   "/js/about.js",
   "/index.html",
   "/about.html",
+  "/js/other.js",
 ];
 
 self.addEventListener("install", (e) => {
