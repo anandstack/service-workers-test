@@ -1,5 +1,5 @@
 console.log("Main.js is loaded");
-const serviceWorkerLocation = 'sw.js'
+const serviceWorkerLocation = "sw.js";
 
 if (navigator.serviceWorker) {
   console.log("Service Worker supported");
@@ -16,9 +16,9 @@ if (navigator.serviceWorker) {
           registration.unregister();
         }
       })
-      /*.then(() => {
+      .then(() => {
         navigator.serviceWorker
-            .register(serviceWorkerLocation)
+          .register(serviceWorkerLocation)
           .then((reg) => {
             console.log("A new Service Worker is registered.");
             console.log(reg);
@@ -27,7 +27,7 @@ if (navigator.serviceWorker) {
             console.log("Error while registering new Service Worker");
             console.log(err);
           });
-      })*/
+      })
       .catch(function (err) {
         console.log("Service Worker unregistration failed: ", err);
       });
