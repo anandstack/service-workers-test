@@ -17,7 +17,7 @@ if (navigator.serviceWorker) {
         }
       })
       .then(() => {
-        navigator.serviceWorker
+        /*navigator.serviceWorker
           .register(serviceWorkerLocation)
           .then((reg) => {
             console.log("A new Service Worker is registered.");
@@ -26,10 +26,22 @@ if (navigator.serviceWorker) {
           .catch((err) => {
             console.log("Error while registering new Service Worker");
             console.log(err);
-          });
+          });*/
+
+        // REMOVE UNWANTED CACHES
+        caches
+          .keys()
+          .then((cacheNames) => {
+            cacheNames.map((cache) => {
+              if (cache !== cacheName) {
+                console.log("Service Worker: Clearing unwanted caches");
+                caches.delete(cache);
+              }
+            });
+          })
       })
       .catch(function (err) {
-        console.log("Service Worker unregistration failed: ", err);
+        console.log("Service Worker un-registration failed: ", err);
       });
   });
 } else console.log("No support for Service Worker.");
