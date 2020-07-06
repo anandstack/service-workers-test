@@ -3,6 +3,7 @@ const cacheName = "jinkaCache-v4";
 const jinka_assets = [
   "/css/main.css",
   "/js/functions.js",
+  "/js/about.js",
   "/index.html",
   "/about.html",
 ];
