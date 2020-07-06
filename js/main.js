@@ -29,16 +29,12 @@ if (navigator.serviceWorker) {
           });*/
 
         // REMOVE UNWANTED CACHES
-        caches
-          .keys()
-          .then((cacheNames) => {
-            cacheNames.map((cache) => {
-              if (cache !== cacheName) {
-                console.log("Service Worker: Clearing unwanted caches");
-                caches.delete(cache);
-              }
-            });
-          })
+        caches.keys().then((cacheNames) => {
+          cacheNames.map((cache) => {
+            console.log("Service Worker: Clearing unwanted caches");
+            caches.delete(cache);
+          });
+        });
       })
       .catch(function (err) {
         console.log("Service Worker un-registration failed: ", err);
