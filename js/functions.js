@@ -7,5 +7,9 @@ function clickFromAbout() {
 }
 
 function newFun() {
-  console.log("hello, I am new");
+  console.log("hello, I am new for About page");
+}
+
+function newFunForHome() {
+  console.log("hello, I am new for Home page");
 }
