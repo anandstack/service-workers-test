@@ -1,5 +1,5 @@
 console.log("Main.js is loaded");
-const serviceWorkerLocation = "sw.js";
+const serviceWorkerLocation = "sw-response.js";
 
 if (navigator.serviceWorker) {
   console.log("Service Worker supported");
